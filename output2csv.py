@@ -4,11 +4,12 @@ import os, re, csv
 lr_pattern = 'array\(\[ (.+?)\]\)'
 res_pattern = '^([0-9.]+$)'
 
-search_dir = "output"
+output_dir = "output"
+results_file = '../results.csv'	# relative to the output_dir
 
-os.chdir( search_dir )
+os.chdir( output_dir )
 files = filter( os.path.isfile, os.listdir( '.' ))
-#files = [ os.path.join( search_dir, f ) for f in files ] # add path to each file
+#files = [ os.path.join( output_dir, f ) for f in files ] # add path to each file
 files.sort( key=lambda x: os.path.getmtime( x ))
 
 results = []
@@ -34,6 +35,6 @@ for file in files:
 		
 	results.append(( lr, res ))
 	
-writer = csv.writer( open( '../results.csv', 'wb' ))
+writer = csv.writer( open( results_file, 'wb' ))
 for result in results:
 	writer.writerow( result )
