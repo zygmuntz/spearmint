@@ -1,8 +1,4 @@
-# python spearmint_sync.py --method=GPEIOptChooser --method-args=noiseless=1 a4
-# python spearmint_sync.py --method=GPEIChooser --method-args=noiseless=1 a4_t2
-# python spearmint_sync.py --method=GPEIChooser a4_t3
-# python spearmint_sync.py --method=GPEIChooser a4_t4
-# python spearmint_sync.py --method=GPEIChooser a4_log
+# python spearmint_sync.py --method=GPEIChooser a4
 
 import sys, subprocess, re
 from math import exp
