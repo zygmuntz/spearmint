@@ -3,8 +3,6 @@
 ntrees = 919
 nvars = 169
 
-setwd( 'D:/devel/bin/spearmint/madelon/' )
-
 train_file = 'data/madelon_train.data'
 train_labels = 'data/madelon_train.labels'
 
